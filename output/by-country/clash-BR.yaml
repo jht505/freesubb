@@ -4,45 +4,47 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇱 IL 01 - xiaohe
+- name: 🇧🇷 BR 01 - xiaohe
   type: vless
-  server: 34.165.56.30
+  server: 35.247.243.231
   port: 443
-  uuid: 0c40bce9-8710-4820-8f22-0742b61df999
+  uuid: 5e517b94-e207-47ee-be3c-3020a57594e8
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: AeQDUAVCESyA1hFkw6lENmgWAY3sBH9CFPpPAddPwVc
+    public-key: pCImwRkTjx8OIUiu1WFelZQFt1p3Q0lUoPbvjVq8GTs
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇮🇱 IL 02 - xiaohe
-  type: vless
-  server: 177.3.208.65
+- name: 🇧🇷 BR 02 - xiaohe
+  type: vmess
+  server: 89.39.161.157
   port: 443
-  uuid: 4f34bc04-479c-49ba-91a8-6bb9ed15031c
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: tgmansion.site
+  servername: ''
   network: ws
   ws-opts:
-    path: /vless-il
+    path: /linkvws
     headers:
-      Host: tgmansion.site
+      Host: ''
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇱 IL 01 - xiaohe
-  - 🇮🇱 IL 02 - xiaohe
+  - 🇧🇷 BR 01 - xiaohe
+  - 🇧🇷 BR 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇱 IL 01 - xiaohe
-  - 🇮🇱 IL 02 - xiaohe
+  - 🇧🇷 BR 01 - xiaohe
+  - 🇧🇷 BR 02 - xiaohe
 rules:
 - MATCH,PROXIES
