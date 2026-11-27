@@ -20,18 +20,53 @@ proxies:
       Host: still-bar-5702.vpnetwork3567.workers.dev
 - name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   type: vless
-  server: 194.135.34.118
-  port: 8443
-  uuid: 020f7f86-a559-4366-8d2d-c6f81d6bbe5f
+  server: turkey-ip1.mmdaqaorg.xyz
+  port: 50738
+  uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: web.hosttcp.fun
+  servername: turkey-ip1.mmdaqaorg.xyz
+- name: 🇹🇷 土耳其 (Turkey) 03 - xiaohe
+  type: vless
+  server: 143.246.136.128
+  port: 50738
+  uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: turkey-ip1.mmdaqaorg.xyz
+- name: 🇹🇷 土耳其 (Turkey) 04 - xiaohe
+  type: vless
+  server: leviko-tr3795.shopingggg.ir
+  port: 50738
+  uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: turkey-ip1.mmdaqaorg.xyz
+- name: 🇹🇷 土耳其 (Turkey) 05 - xiaohe
+  type: vless
+  server: 143.246.136.128
+  port: 50738
+  uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: turkey-ip1.mmdaqaorg.xyz
+- name: 🇹🇷 土耳其 (Turkey) 06 - xiaohe
+  type: vless
+  server: v2new.nimbaha9.ir
+  port: 8080
+  uuid: f279c19a-b324-40cf-af57-049f9b1b68f2
+  udp: true
+  tls: false
+  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /api/v4/media/session
+    path: /XDS45
     headers:
-      Host: 194.135.34.118
+      Host: v2new.nimbaha9.ir
 proxy-groups:
 - name: PROXIES
   type: select
@@ -39,6 +74,10 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 04 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 05 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -46,5 +85,9 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 04 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 05 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 06 - xiaohe
 rules:
 - MATCH,PROXIES
